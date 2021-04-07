@@ -1,0 +1,91 @@
+{
+    "version": "2.0.0",
+    "tasks": [{
+            "label": "g++",
+            "command": "g++",
+            "args": [
+                "-g",
+                "${file}",
+                "-o",
+                "${fileDirname}/${fileBasenameNoExtension}.exe"
+            ],
+            "problemMatcher": {
+                "owner": "cpp",
+                "fileLocation": [
+                    "relative",
+                    "${workspaceRoot}"
+                ],
+                "pattern": {
+                    "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
+                    "file": 1,
+                    "line": 2,
+                    "column": 3,
+                    "severity": 4,
+                    "message": 5
+                }
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "new", //这里shared表示共享，改成new之后每个进程创建新的端口
+                "showReuseMessage": true,
+                "clear": false
+            }
+        }
+    ]
+}
+
+// {
+//     "version": "2.0.0",
+//     "command": "g++",
+//     "args": ["-g","${file}","-o","${fileDirname}/${fileBasenameNoExtension}.exe"],    // 编译命令参数
+//     "problemMatcher": {
+//         "owner": "cpp",
+//         "fileLocation": ["relative", "${workspaceFolder}"],
+//         "pattern": {
+//             "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
+//             "file": 1,
+//             "line": 2,
+//             "column": 3,
+//             "severity": 4,
+//             "message": 5
+//         }
+//     },
+//     "presentation": {
+//         "echo": true,
+//         "reveal": "always",
+//         "focus": false,
+//         "panel": "new", //这里shared表示共享，改成new之后每个进程创建新的端口
+//         "showReuseMessage": true,
+//         "clear": false
+//     }
+// }
+
+// {
+//     "version": "2.0.0",
+//     "tasks": [
+//         {
+//             "type": "shell",
+//             "label": "task g++",    //修改此项  C:\\GCC\\TDM-GCC-64\\bin\\gdb64.exe",
+//             "command": "C:\\GCC\\TDM-GCC-64\\bin\\g++.exe",
+//             "args": [
+//                 "-g",
+//                 "${file}",
+//                 "-o",
+//                 "${fileDirname}\\${fileBasenameNoExtension}.exe"
+//             ],
+//             "options": {
+//                 "cwd": "C:\\GCC\\TDM-GCC-64\\bin"
+//             },
+//             "problemMatcher": [
+//                 "$gcc"
+//             ],
+//             "group": "build"
+//         }
+//     ]
+// }

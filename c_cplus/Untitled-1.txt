@@ -1,0 +1,20 @@
+root@lx:~# <!DOCTYPE html><html lang=zh-CN><head><meta charset=utf-8><meta name=renderer content=webkit><meta na
+me=viewport content="width=1250"><meta http-equiv=X-UA-Compatible content="IE=EmulateIE9,chrome=1"><meta name=key
+words content=设计模板、在线设计工具、图片素材><meta name=description content=简单免费的在线设计工具，提供丰富精美的设计图片素材，无需PS技术，小白也能轻松搞定海报、邀请函、贺
+卡、banner、表情包等设计模板制作。><title>【设计模板】简单好用的在线设计工具，提供丰富精美的设计图片素材</title><!--[if IE]>
+        <script>
+            window.location.replace('/upgrade-browser');
+        </script>
+        <![endif]--><link href=https://cdn.dancf.com/design/css/chunk-vendors.9de7a2bd.css 
+        rel=stylesheet><link href=https://cdn.dancf.com/design/css/design.94bdf0c1.css rel=stylesheet>
+        <link rel=icon type=image/png sizes=32x32 href="https://cdn.dancf.com/design/img/icons/favicon-32x32.ico?v=2">
+        <link rel=icon type=image/png sizes=16x16 href="https://cdn.dancf.com/design/img/icons/favicon-16x16.png?v=2"
+        ><link rel=manifest href="https://cdn.dancf.com/design/manifest.json?v=2"><meta name=theme-color content=#4DBA87>
+        <meta name=apple-mobile-web-app-capable content=no><meta name=apple-mobile-web-app-status-bar-style content=default>
+        <meta name=apple-mobile-web-app-title content=editor><link rel=apple-touch-icon href="https://cdn.dancf.com/design/img/icons/apple-touch-icon-152x152.png?v=2">
+        <link rel=mask-icon href="https://cdn.dancf.com/design/img/icons/safari-pinned-tab.svg?v=2" color=#4DBA87><meta name=msapplication-TileImage 
+        content="https://cdn.dancf.com/design/img/icons/msapplication-icon-144x144.png?v=2"><meta name=msapplication-TileColor 
+        content=#000000></head><body><div id=app></div><script src=https://cdn.dancf.com/design/js/chunk-vendors.494c709a.js>
+        </script><script src=https://cdn.dancf.com/design/js/design.f630a9fe.js></script></body></html>
+[1]-  Done                    curl https://www.gaoding.com/design?id=25235453
+[2]+  Done                    simple=1
