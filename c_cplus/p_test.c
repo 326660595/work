@@ -4,6 +4,12 @@
 #include <stdlib.h>
 #include <string.h>
 #include <stdint.h>
+
+
+int b =880;
+
+
+
 //任何声明变量的语句前面加上typedef之后，原来是变量的都变成一种类型。不管这个声明中的标识符号出现在中间还是最后.
 typedef int mbedtls_threading_mutex_t;
 
@@ -42,14 +48,14 @@ void test_2(mbedtls_threading *mutex)
 #endif
 /////////////////////////////////////////-----------------------------------------
 
-int main(void)
-{
-    int a = 3;
-    mbedtls_mutex_init(&a);
-    test_p p_a = threading_mutex_dummy;
-    p_a(&a);
+// int main(void)
+// {
+//     int a = 3;
+//     mbedtls_mutex_init(&a);
+//     test_p p_a = threading_mutex_dummy;
+//     p_a(&a);
 
-    test_2(&mutex);
+//     test_2(&mutex);
 
-    getchar();
-}
+//     getchar();
+// }

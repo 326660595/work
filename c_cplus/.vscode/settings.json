@@ -1,6 +1,15 @@
 {
     "files.associations": {
         "stdint.h": "c",
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "cjson.h": "c",
+        "cstddef": "c",
+        "limits": "c",
+        "memory": "c",
+        "system_error": "c",
+        "xiosbase": "c",
+        "xlocale": "c",
+        "xstring": "c",
+        "xutility": "c"
     }
 }

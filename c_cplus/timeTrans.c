@@ -45,7 +45,7 @@ struct tm * timeStampToDate(uint64_t value)
     uint64_t timeStamps = value;
 	struct tm *info;
 	uint8_t time[6] = {0};
-    info = gmtime(&timeStamps);//时间戳转换为结构体tm
+    //info = gmtime(&timeStamps);//时间戳转换为结构体tm
 
     // time[0] = info->tm_year - 100;
     // time[1] = info->tm_mon + 1;

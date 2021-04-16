@@ -1,11 +1,13 @@
 #include <stdio.h>
 #include <time.h>
+#include "stl/cJSON.h"
 #include <stdbool.h>
 #include <stdlib.h>
 #include <string.h>
 #include <stdint.h>
 //#include <queue.h>
 #include "test_1.h"
+// #include <pthread.h>
 
 typedef unsigned char uint8_t;
 typedef unsigned int uint32_t;
@@ -203,36 +205,103 @@ const void *test_void = test_char;
 #define W
 #define A
 #define B
-void ta(int a,int b)
+void ta(int a, int b)
 {
-    printf("a+b=%d",a+b);
-
+    printf("a+b=%d", a + b);
 }
-void tb(int a,int b)
+void tb(int a, int b)
 {
-    printf("a*b=%d",a*b);
-
+    printf("a*b=%d", a * b);
 }
-typedef void (*testFuncP)(int a,int b);
+typedef void (*testFuncP)(int a, int b);
 
 testFuncP test_2 = ta;
 testFuncP get_testFuncP(void)
 {
     return test_2;
 }
+#define ppf              \
+    {                    \
+        printf("aaa\n"); \
+        printf("bbb\n"); \
+    }
+
+#define log_debug(lfmt, ...) printf(lfmt, ##__VA_ARGS__) //宏定义printf，方便注释
+
+int strcmp(const char *s1, const char *s2)
+{
+    const unsigned char *c1 = (const unsigned char *)s1;
+    const unsigned char *c2 = (const unsigned char *)s2;
+    unsigned char ch;
+    int d = 0;
+
+    while (1)
+    {
+        d = (int)(ch = *c1++) - (int)*c2++;
+        printf("at=%d,bt=%d\n", (int)(ch = *c1++), (int)*c2++);
+        if (d || !ch)
+            break;
+    }
+
+    return d;
+}
+typedef enum
+{
+    SOFT_AP, /* Act as an access point, and other station can connect, 4
+                stations Max */
+    STATION  /* Act as a station which can connect to an access point */
+} hal_wifi_type_t;
+
+enum
+{
+    DHCP_DISABLE = 0,
+    DHCP_CLIENT,
+    DHCP_SERVER,
+};
+typedef struct klist_s {
+    struct klist_s *next;
+    struct klist_s *prev;
+} klist_t;// klist_t结构体含有两个成员，是klist_s结构体指针
+
+
+extern int b;
+static int a =990;
 
 int main()
 {
     printf("good \n");
 
-    uint8_t aa = 8;
 
-    printf("0-8 = %d\n / \n0-aa = %d\n",0-8,aa = 0-aa);
-
-
+    //int b =880;
+    printf("a= %d;  b =%d",a,b);
 
 
 
+
+///////////////////////////////////////////////////-----------------------------------------------------
+    // hal_wifi_type_t hal1 = SOFT_AP;
+
+
+    // char *s1 = "aabbc";
+    // char *s2 = "aabbdd";
+    // if ((-1))
+    //     printf("s1-s2=%d\n", strcmp(s1, s2));
+    // else
+    //     printf("!(-1)=%d\n", !(-1));
+    // int w1 = -1;
+    // do
+    // {
+    //     printf("%d is true\n",w1);
+    // } while (w1++);
+
+    //////////////////////////------------------------------------------------------
+    // uint8_t aa = 8;
+
+    // printf("0-8 = %d\n / \n0-aa = %d\n",0-8,aa = 0-aa);
+
+    // ppf
+
+    // log_debug("abcd = %d\n",100);
 
     ////////////////////////////------------------------------------------------
 
@@ -250,9 +319,6 @@ int main()
     // }else{
     //     printf("test 3 NULL\n\n");
     // }
-
-
-
 
     ////////////////////////////-----------------------------------------
 
@@ -273,15 +339,15 @@ int main()
     // Cipher_Type_e aab = CIPHER_TYPE_SELF;
     // mmmmsss(aab);
 
-// #if defined(W)
-//     printf("\n1");
-// #endif
-// #if defined(A)
-//     printf("\n2");
-// #endif
-// #if defined(B)
-//     printf("\n3");
-// #endif
+    // #if defined(W)
+    //     printf("\n1");
+    // #endif
+    // #if defined(A)
+    //     printf("\n2");
+    // #endif
+    // #if defined(B)
+    //     printf("\n3");
+    // #endif
 
     // int g_cipher_type = 255;
 

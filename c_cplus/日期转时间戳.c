@@ -4,31 +4,31 @@
 #include <stdint.h>
 
 
-/////////////////////////////////////////////////时间戳转日期
-void timeStampToDate(uint32_t timeStamp)
-{
-	struct tm *info;
-	uint8_t time[6] = {0};
-    info = gmtime(&timeStamp);//时间戳转换为结构体tm
+// /////////////////////////////////////////////////时间戳转日期
+// void timeStampToDate(uint32_t timeStamp)
+// {
+// 	struct tm *info;
+// 	uint8_t time[6] = {0};
+//    // info = gmtime(&timeStamp);//时间戳转换为结构体tm
 
-    time[0] = info->tm_year - 100;
-    time[1] = info->tm_mon + 1;
-    if ((info->tm_hour + 8) > 24)
-    {
-        time[2] = info->tm_mday + 1;
-        time[3] = (info->tm_hour + 8) % 24;
-    }
-    else
-    {
-        time[2] = info->tm_mday;
-        time[3] = info->tm_hour + 8;
-    }
-    time[4] = info->tm_min;
-    time[5] = info->tm_sec;
-    printf("time is :%d.%d.%d.%d:%d:%d", time[0], time[1], time[2], time[3], time[4], time[5]);
+//     // time[0] = info->tm_year - 100;
+//     // time[1] = info->tm_mon + 1;
+//     // if ((info->tm_hour + 8) > 24)
+//     // {
+//     //     time[2] = info->tm_mday + 1;
+//     //     time[3] = (info->tm_hour + 8) % 24;
+//     // }
+//     // else
+//     // {
+//     //     time[2] = info->tm_mday;
+//     //     time[3] = info->tm_hour + 8;
+//     // }
+//     // time[4] = info->tm_min;
+//     // time[5] = info->tm_sec;
+//     // printf("time is :%d.%d.%d.%d:%d:%d", time[0], time[1], time[2], time[3], time[4], time[5]);
 
-    return;
-}
+//     return;
+// }
 ////////////////////////////////////////////////////////////////////
 typedef unsigned int  uint32_t;
 typedef unsigned short     uint16_t;
@@ -66,10 +66,10 @@ uint32_t mktimestamp(uint16_t *dt,uint16_t len)
 
 int main()
 {
-    // uint32_t time = mktimestamp(time_bcd,6);
-    // printf("timestamp : %d",time);
+    uint32_t time = mktimestamp(time_bcd,6);
+    printf("timestamp : %d",time);
 
-    timeStampToDate(1617677766);
+    //timeStampToDate(1617677766);
 
     getchar();
     return 0;
